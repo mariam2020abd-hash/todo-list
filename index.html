@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>To-Do List</h1>
+      <p class="subtitle">Stay organized, one task at a time</p>
+    </header>
+
+    <section class="input-section">
+      <form id="task-form" class="task-form" novalidate>
+        <input
+          type="text"
+          id="task-input"
+          class="task-input"
+          placeholder="What needs to be done?"
+          autocomplete="off"
+          maxlength="200"
+        >
+        <button type="submit" class="btn btn-add">Add Task</button>
+      </form>
+      <p id="error-message" class="error-message" role="alert" aria-live="polite"></p>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <span class="stat-value" id="total-count">0</span>
+        <span class="stat-label">Total</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="completed-count">0</span>
+        <span class="stat-label">Completed</span>
+      </div>
+    </section>
+
+    <ul id="task-list" class="task-list" aria-label="Task list"></ul>
+
+    <p id="empty-state" class="empty-state">No tasks yet. Add one above!</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
